@@ -53,6 +53,16 @@
 		.cell { font-size: 25px; }
 	}
 
+ 	#toggleFullscreen {
+		position: absolute;
+		width:50%;
+		height:50%;
+		top: 50%;
+		left: 50%;
+		-ms-transform: translate(-50%, -50%);
+	    -webkit-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
+	}
 	</style>
 </head>
 <body>
@@ -62,11 +72,29 @@
 		<div class="cell"><span></span></div>
 		<div class="cell"><span></span></div>
 		<div class="cell"><span></span></div>
-	</div>
+ 		<button id="toggleFullscreen" onclick="launchIntoFullscreen(document.documentElement)">Fullscreen</button>
+ </div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
 	<script src="screensaver.js" type="text/javascript"></script>
-	
+	<script>
+	// Find the right method, call on correct element, source: http://davidwalsh.name/fullscreen
+		function launchIntoFullscreen(element) {
+			var button = document.getElementById('toggleFullscreen');
+			button.style.display = 'none';
+		  if(element.requestFullscreen) {
+		    element.requestFullscreen();
+		  } else if(element.mozRequestFullScreen) {
+		    element.mozRequestFullScreen();
+		  } else if(element.webkitRequestFullscreen) {
+		    element.webkitRequestFullscreen();
+		  } else if(element.msRequestFullscreen) {
+		    element.msRequestFullscreen();
+		  }
+		}
+
+	</script>
+
 </body>
 </html>

@@ -1,9 +1,4 @@
 # headlines-screensaver
-Screensaver which shows actual headlines of Tweakers.net
+Forked from: https://github.com/denvers/headlines-screensaver
 
-Inspired by a visit at Google HQ in Dublin (http://hawttrends.appspot.com/)
-
-![alt tag](https://raw.github.com/denvers/headlines-screensaver/master/preview.png)
-
-# usage
-Mac OS X: Use [WebViewScreenSaver](https://github.com/liquidx/webviewscreensaver/releases) to use this webpage as your screensaver.
+Added a massive button which takes you to fullscreen for usage on a Samsung Smart TV
